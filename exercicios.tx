@@ -1,0 +1,170 @@
+Exercício 1
+Crie uma função que exiba uma mensagem de boas-vindas ao usuário quando a página for carregada. Utilize essa função para personalizar a experiência de cada usuário.
+
+Exercício 2
+Desenvolva uma função que receba um número como parâmetro e verifique se ele é par ou ímpar. Retorne true se for par e false se for ímpar.
+
+Exercício 3
+Implemente uma função que calcule a média aritmética de um array de números e retorne o resultado. Utilize essa função para calcular a média de diferentes conjuntos de números.
+
+Exercício 4
+Crie uma função que receba uma string como parâmetro e retorne a mesma string com todas as letras em caixa alta. Utilize essa função para converter diferentes strings.
+
+Exercício 5
+Desenvolva uma função que determine se um número é primo ou não. Retorne true se for primo e false se não for.
+
+Exercício 6
+Implemente uma função que inverta a ordem dos elementos em um array. Utilize essa função para inverter a ordem de diferentes conjuntos de elementos.
+
+Exercício 7
+Crie uma função que receba um valor e uma porcentagem como parâmetros. A função deve retornar o valor acrescido da porcentagem indicada.
+
+Exercício 8
+Desenvolva uma função que verifique se uma palavra é um palíndromo (lê-se da mesma forma da esquerda para a direita e vice-versa). Retorne true se for um palíndromo e false se não for.
+
+Exercício 9
+Implemente uma função que receba um número como parâmetro e retorne sua representação binária. Utilize essa função para converter diferentes números em binário.
+
+Exercício 10
+Crie uma função que calcule o fatorial de um número. Utilize essa função para calcular o fatorial de diferentes números.
+
+Aprenda como utilizar funções em JavaScript através desses exercícios práticos e divertidos.
+
+
+
+
+Exercícios Adicionais
+
+Exercício 1
+Crie uma função que receba dois números como parâmetros e retorne a soma deles. Utilize essa função para realizar somas diferentes.
+
+Exercício 2
+Desenvolva uma função que calcule o valor de um produto com desconto. A função deve receber o valor original do produto e o percentual de desconto como parâmetros, e retornar o valor com desconto aplicado. Utilize essa função para calcular o valor final de diferentes produtos.
+
+Exercício 3
+Implemente uma função que verifique se uma palavra é um anagrama de outra. Um anagrama é uma palavra que pode ser formada a partir de outra, reorganizando suas letras. Retorne true se for um anagrama e false se não for.
+
+Exercício 4
+Crie uma função que receba um número como parâmetro e verifique se ele é um quadrado perfeito. Um quadrado perfeito é um número que pode ser expresso como o produto de dois números iguais. Retorne true se for um quadrado perfeito e false se não for.
+
+Exercício 5
+Desenvolva uma função que calcule a área de um círculo. A função deve receber o raio como parâmetro e retornar a área calculada.
+
+Exercício 6
+Implemente uma função que receba uma string como parâmetro e verifique se ela é um palíndromo, ignorando maiúsculas e minúsculas. Retorne true se for um palíndromo e false se não for.
+
+Exercício 7
+Crie uma função que receba uma lista de números como parâmetro e retorne o maior número da lista.
+
+Exercício 8
+Desenvolva uma função que converta uma temperatura de Celsius para Fahrenheit. A função deve receber a temperatura em Celsius como parâmetro e retornar a temperatura convertida.
+
+Exercício 9
+Implemente uma função que calcule a média ponderada de um conjunto de notas. A função deve receber as notas e os respectivos pesos como parâmetros, e retornar a média ponderada.
+
+Exercício 10
+Crie uma função que receba um número como parâmetro e verifique se ele é um número primo. Retorne true se for um número primo e false se não for.
+
+Agora que você conhece esses exercícios divertidos de funções em JavaScript, aproveite para praticar e aprimorar suas habilidades. Lembre-se de que a prática constante é essencial para se tornar um programador JavaScript talentoso. Divirta-se e bons estudos!
+
+
+Exercícios de Funções Desafiadores
+
+Exercício 1
+Crie uma função que valide se uma senha atende aos critérios estabelecidos, como ter no mínimo 8 caracteres, pelo menos uma letra maiúscula, pelo menos uma letra minúscula e pelo menos um caractere especial.
+
+Exercício 2
+Implementar uma função que receba um número e retorne todos os números primos menores ou iguais a ele.
+
+Exercício 3
+Criar uma função que remova elementos duplicados de um array e retorne o novo array sem duplicatas.
+
+Exercício 4
+Desenvolver uma função que receba uma lista de nomes e retorne uma nova lista contendo apenas os nomes que começam com uma determinada letra.
+
+Exercício 5
+Implementar uma função que receba um texto e retorne o número de palavras presentes nele.
+
+Exercício 6
+Criar uma função que receba uma data como parâmetro e retorne o dia da semana correspondente.
+
+Exercício 7
+Desenvolver uma função que ordene um array de objetos com base em uma determinada propriedade.
+
+Exercício 8
+Implementar uma função que calcule o fatorial de um número utilizando recursividade.
+
+Exercício 9
+Criar uma função que receba um número e retorne a soma dos seus dígitos.
+
+Exercício 10
+Desenvolver uma função que converta um número binário para decimal.
+
+
+Exercícios Interativos de Funções Divertidas
+
+Exercício 1
+Crie uma função que inverta uma palavra fornecida como parâmetro e retorne a palavra invertida.
+
+Exercício 2
+Implemente uma função que retorne a soma de todos os números pares em um array.
+
+Exercício 3
+Desenvolva uma função que verifique se um número é um quadrado perfeito, ou seja, se a raiz quadrada do número é um número inteiro.
+
+Exercício 4
+Crie uma função que receba uma string e retorne a mesma string, mas com as palavras em ordem reversa.
+
+Exercício 5
+Implemente uma função que valide se um número é primo ou não.
+
+Exercício 6
+Desenvolva uma função que receba um objeto como parâmetro, remova todas as propriedades que possuem valores vazios e retorne o objeto modificado.
+
+Exercício 7
+Crie uma função que retorne a média aritmética de todos os números em um array.
+
+Exercício 8
+Implemente uma função que retorne a quantidade de vogais em uma string.
+
+Exercício 9
+Desenvolva uma função que receba uma lista de números como parâmetro e retorne a soma de todos os números ímpares.
+
+Exercício 10
+Crie uma função que pegue um array de números e retorne um novo array apenas com os números positivos.
+
+
+
+
+Exercícios de lógica de programação iniciante Javascript
+
+Variáveis e tipos de dados: Escreva um programa que declare duas variáveis, “nome” e “idade”, e as imprima em um console em uma frase que diga “Olá, meu nome é [nome] e eu tenho [idade] anos”.
+
+Operadores: Crie um programa que solicite ao usuário dois números e exiba o resultado da soma, subtração, multiplicação e divisão desses números.
+
+
+Condições: Escreva um programa que pergunte ao usuário sua idade e imprima se ele é maior ou menor de idade.
+
+Loops: Crie um loop que imprima todos os números de 1 a 100.
+
+Funções: Escreva uma função que aceite dois números como argumentos e retorne sua soma.
+
+Arrays: Escreva um programa que declare um array de suas frutas favoritas e imprima cada fruta na lista usando um loop.
+
+Objetos: Crie um objeto que represente um livro, com propriedades para título, autor e número de páginas. Imprima cada propriedade no console.
+
+Eventos DOM: Crie uma página HTML com um botão que, quando clicado, exiba um alerta que diga “Você clicou no botão!”.
+
+Manipulação de Strings: Escreva uma função que receba uma string e retorne a mesma string, mas com a primeira letra de cada palavra em maiúsculas.
+
+Promises e Fetch API: Use a Fetch API para fazer uma chamada para uma API pública (como a API do JSONPlaceholder) e exibir os resultados no console.
+
+
+
+Exercício de Fibonacci
+Neste exercício, você deve criar uma função em JavaScript para calcular o n-ésimo número na sequência de Fibonacci.
+A sequência de Fibonacci é uma série de números em que cada número é a soma dos dois precedentes. Ela começa normalmente com 0 e 1. Os primeiros números da sequência são: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, e assim por diante.
+Seu objetivo é criar uma função chamada fibonacci, que aceite um número inteiro positivo n como argumento e retorne o n-ésimo número na sequência de Fibonacci.
+
+Desafio: Encontre a palavra mais longa
+Dado um texto, escreva uma função que encontre a palavra mais longa presente nele.
