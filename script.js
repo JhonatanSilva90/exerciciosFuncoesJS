@@ -672,3 +672,255 @@ const decimalResultado = binarioParaDecimal(binarioExemplo);
 console.log(
   `O número binário ${binarioExemplo} em decimal é ${decimalResultado}`
 );
+
+Exercícios Interativos de Funções Divertidas
+
+// Exercício 1
+// Crie uma função que inverta uma palavra fornecida como parâmetro e retorne a palavra invertida.
+function inverterPalavra(palavra) {
+  // Utilizar o método split para converter a string em um array de caracteres
+  // Utilizar o método reverse para inverter a ordem dos elementos do array
+  // Utilizar o método join para converter o array de volta para uma string
+  return palavra.split("").reverse().join("");
+}
+
+// Exemplo de uso da função
+let palavraOriginal = "Brasil";
+
+// Chamar a função para inverter a palavra
+let palavraInvertida = inverterPalavra(palavraOriginal);
+
+// Exibir a palavra invertida
+console.log(
+  `A palavra ${palavraOriginal} invertida ficaria ${palavraInvertida}.`
+);
+
+// Exercício 2
+// Implemente uma função que retorne a soma de todos os números pares em um array.
+function somaNumerosPares(array) {
+  // Utilizar o método reduce para somar apenas os números pares
+  return array.reduce((soma, numero) => {
+    // Verificar se o número é par
+    if (numero % 2 === 0) {
+      // Se for par, adicionar ao total
+      return soma + numero;
+    } else {
+      // Se não for par, manter o total inalterado
+      return soma;
+    }
+  }, 0); // O segundo parâmetro do reduce é o valor inicial da soma (0 neste caso)
+}
+
+// Exemplo de uso da função
+let numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// Chamar a função para obter a soma dos números pares
+let resultado = somaNumerosPares(numeros);
+
+// Exibir o resultado
+console.log(
+  `A soma dos números pares dispostos no array [${numeros}] é igual a ${resultado}.`
+);
+
+// Exercício 3
+// Desenvolva uma função que verifique se um número é um quadrado perfeito, ou seja, se a raiz quadrada do número é um número inteiro.
+function ehQuadradoPerfeito(numero) {
+  // Calcular a raiz quadrada do número
+  let raizQuadrada = Math.sqrt(numero);
+
+  // Verificar se a raiz quadrada é um número inteiro
+  return raizQuadrada % 1 === 0;
+}
+
+// Exemplo de uso da função
+let numero1 = 25;
+let numero2 = 30;
+
+// Verificar se os números são quadrados perfeitos
+console.log(`${numero1} é quadrado perfeito? ${ehQuadradoPerfeito(numero1)}`);
+console.log(`${numero2} é quadrado perfeito? ${ehQuadradoPerfeito(numero2)}`);
+
+// Exercício 4
+// Crie uma função que receba uma string e retorne a mesma string, mas com as palavras em ordem reversa.
+function inverterOrdemPalavras(frase) {
+  // Utilizar o método split para dividir a frase em um array de palavras
+  // Utilizar o método reverse para inverter a ordem dos elementos do array
+  // Utilizar o método join para converter o array de volta para uma string
+  return frase.split(" ").reverse().join(" ");
+}
+
+// Exemplo de uso da função
+let fraseOriginal = "Esta é uma frase de exemplo";
+
+// Chamar a função para inverter a ordem das palavras na frase
+let fraseInvertida = inverterOrdemPalavras(fraseOriginal);
+
+// Exibir a frase invertida
+console.log(
+  `A frase '${fraseOriginal}' invertida ficaria '${fraseInvertida}'.`
+);
+
+// Exercício 5
+// Implemente uma função que valide se um número é primo ou não.
+function ehPrimo(numero) {
+  // Verificar se o número é menor ou igual a 1, pois números menores ou iguais a 1 não são primos
+  if (numero <= 1) {
+    return false;
+  }
+
+  // Verificar divisibilidade por números de 2 até a raiz quadrada do número
+  for (let i = 2; i <= Math.sqrt(numero); i++) {
+    if (numero % i === 0) {
+      // Se for divisível por algum número, não é primo
+      return false;
+    }
+  }
+
+  // Se não foi divisível por nenhum número, é primo
+  return true;
+}
+
+// Exemplo de uso da função
+let numero1 = 7;
+let numero2 = 12;
+
+// Verificar se os números são primos
+console.log(numero1 + " é primo? " + ehPrimo(numero1));
+console.log(numero2 + " é primo? " + ehPrimo(numero2));
+
+// Exercício 6
+// Desenvolva uma função que receba um objeto como parâmetro, remova todas as propriedades que possuem valores vazios e retorne o objeto modificado.
+function removerPropriedadesVazias(objeto) {
+  for (const chave in objeto) {
+    if (objeto.hasOwnProperty(chave)) {
+      const valor = objeto[chave];
+
+      // Verificar se o valor é vazio (null, undefined, string vazia, array vazio, objeto vazio, etc.)
+      if (
+        valor === null ||
+        valor === undefined ||
+        (typeof valor === "string" && valor.trim() === "") ||
+        (Array.isArray(valor) && valor.length === 0) ||
+        (typeof valor === "object" && Object.keys(valor).length === 0)
+      ) {
+        // Remover a propriedade se o valor for vazio
+        delete objeto[chave];
+      }
+    }
+  }
+
+  return objeto;
+}
+
+// Exemplo de uso da função
+let objetoOriginal = {
+  nome: "João",
+  idade: 25,
+  cidade: "",
+  interesses: [],
+  detalhes: {
+    email: "",
+    telefone: null,
+  },
+};
+
+// Chamar a função para remover propriedades vazias
+let objetoModificado = removerPropriedadesVazias(objetoOriginal);
+
+// Exibir o objeto modificado
+console.log(objetoModificado);
+
+// Exercício 7
+// Crie uma função que retorne a média aritmética de todos os números em um array.
+function calcularMediaAritmetica(array) {
+  // Verificar se o array está vazio
+  if (array.length === 0) {
+    return 0; // Se estiver vazio, a média é zero
+  }
+
+  // Utilizar o método reduce para somar todos os elementos do array
+  let soma = array.reduce((total, numero) => total + numero, 0);
+
+  // Calcular a média dividindo a soma pelo número de elementos
+  let media = soma / array.length;
+
+  return media;
+}
+
+// Exemplo de uso da função
+let numeros = [10, 5, 8, 12, 7];
+
+// Chamar a função para obter a média aritmética
+let media = calcularMediaAritmetica(numeros);
+
+// Exibir a média
+console.log(`A média aritmética dos numeros '${numeros}' é ${media}.`);
+
+// Exercício 8
+// Implemente uma função que retorne a quantidade de vogais em uma string.
+function contarVogais(frase) {
+  // Converter a string para letras minúsculas para tornar a contagem de vogais case-insensitive
+  let fraseMinusc = frase.toLowerCase();
+
+  // Utilizar o método match com uma expressão regular para encontrar todas as vogais na string
+  let vogaisEncontradas = fraseMinusc.match(/[aeiou]/g);
+
+  // Verificar se vogaisEncontradas é nulo (nenhuma vogal encontrada) e retornar 0 nesse caso
+  // Caso contrário, retornar o comprimento do array vogaisEncontradas
+  return vogaisEncontradas ? vogaisEncontradas.length : 0;
+}
+
+// Exemplo de uso da função
+let frase = "Olá, mundo!";
+
+// Chamar a função para contar as vogais na frase
+let quantidadeVogais = contarVogais(frase);
+
+// Exibir a quantidade de vogais
+console.log(`Existem ${quantidadeVogais} vogais na frase '${frase}'.`);
+
+// Exercício 9
+// Desenvolva uma função que receba uma lista de números como parâmetro e retorne a soma de todos os números ímpares.
+function somarNumerosImpares(listaNumeros) {
+  // Utilizar o método reduce para somar apenas os números ímpares
+  return listaNumeros.reduce((soma, numero) => {
+    // Verificar se o número é ímpar
+    if (numero % 2 !== 0) {
+      // Se for ímpar, adicionar ao total
+      return soma + numero;
+    } else {
+      // Se não for ímpar, manter o total inalterado
+      return soma;
+    }
+  }, 0); // O segundo parâmetro do reduce é o valor inicial da soma (0 neste caso)
+}
+
+// Exemplo de uso da função
+let numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// Chamar a função para obter a soma dos números ímpares
+let resultado = somarNumerosImpares(numeros);
+
+// Exibir o resultado
+console.log(
+  `A soma dos números ímpares existentes na lista [${numeros}] é ${resultado}.`
+);
+
+// Exercício 10
+// Crie uma função que pegue um array de números e retorne um novo array apenas com os números positivos.
+function filtrarNumerosPositivos(array) {
+  // Utilizar o método filter para criar um novo array apenas com os números positivos
+  let numerosPositivos = array.filter((numero) => numero > 0);
+  return numerosPositivos;
+}
+
+// Exemplo de uso da função
+let numeros = [-2, 5, 0, -8, 10, -3, 7];
+
+// Chamar a função para obter um novo array apenas com os números positivos
+let numerosPositivos = filtrarNumerosPositivos(numeros);
+
+// Exibir o novo array
+console.log(
+  `Os números positivos existentes na lista [${numeros}] são ${numerosPositivos}.`
+);
