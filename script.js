@@ -445,3 +445,230 @@ const nume2 = 12; // false
 
 console.log(`${nume1} é um número primo? ${ehNumeroPrimo(nume1)}`);
 console.log(`${nume2} é um número primo? ${ehNumeroPrimo(nume2)}`);
+
+// Exercício 1
+// Crie uma função que valide se uma senha atende aos critérios estabelecidos
+// como ter no mínimo 8 caracteres, pelo menos uma letra maiúscula,
+// pelo menos uma letra minúscula e pelo menos um caractere especial(ou númerico).
+const regex =
+  /^(?=.*[a-z])(?=.*[A-Z])(?=.*[\d!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]).{8,}$/;
+
+const senha = "Exemplo@123";
+if (regex.test(senha)) {
+  console.log("Senha válida!");
+} else {
+  console.log("Senha inválida!");
+}
+
+// Exercício 2
+// Implementar uma função que receba um número e retorne todos os números primos
+// menores ou iguais a ele.
+function numeroPrimo(num) {
+  if (num < 2) {
+    return false;
+  }
+  for (let i = 2; i <= Math.sqrt(num); i++) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+  return true;
+}
+
+function pegarPrimos(n) {
+  const primos = [];
+  for (let i = 2; i <= n; i++) {
+    if (numeroPrimo(i)) {
+      primos.push(i);
+    }
+  }
+  return primos;
+}
+
+// Exemplo de uso:
+const numero = 10;
+const resultado = pegarPrimos(numero);
+console.log(`Números primos até ${numero}: ${resultado}`);
+
+// Exercício 3
+// Criar uma função que remova elementos duplicados de um array e
+// retorne o novo array sem duplicatas.
+function removeDuplicates(arr) {
+  return [...new Set(arr)];
+}
+
+// Exemplo de uso:
+const arrayComDuplicatas = [1, 2, 8, 4, 2, 5, 6, 1, 7];
+const arraySemDuplicatas = removeDuplicates(arrayComDuplicatas);
+console.log("Array sem duplicatas:", arraySemDuplicatas);
+
+// Exercício 4
+// Desenvolver uma função que receba uma lista de nomes e retorne uma nova lista
+// contendo apenas os nomes que começam com uma determinada letra.
+function filterNamesByLetter(names, startingLetter) {
+  const filteredNames = names.filter(
+    (name) => name.charAt(0).toUpperCase() === startingLetter.toUpperCase()
+  );
+  return filteredNames;
+}
+
+// Exemplo de uso:
+const listaDeNomes = [
+  "Alice",
+  "Alana",
+  "Breno",
+  "Bob",
+  "Carlos",
+  "Charlie",
+  "David",
+  "Eva",
+  "Frank",
+];
+const letraFiltrar = "b";
+
+const nomesFiltrados = filterNamesByLetter(listaDeNomes, letraFiltrar);
+console.log(`Nomes que começam com a letra "${letraFiltrar}":`, nomesFiltrados);
+
+// Exercício 5
+// Implementar uma função que receba um texto e retorne o número de palavras
+// presentes nele.
+function contarPalavras(texto) {
+  // Remover espaços extras no início e no final do texto
+  const textoSemEspacosExtras = texto.trim();
+
+  // Dividir o texto em palavras usando espaços como delimitadores
+  const palavras = textoSemEspacosExtras.split(/\s+/);
+
+  // Retornar o número de palavras
+  return palavras.length;
+}
+
+// Exemplo de uso:
+const textoExemplo = "Esta é uma frase de exemplo.";
+const numeroDePalavras = contarPalavras(textoExemplo);
+
+console.log(`Esse texto contém ${numeroDePalavras} palavras.`);
+
+// Exercício 6
+// Criar uma função que receba uma data como parâmetro e retorne o dia da semana correspondente.
+function obterDiaDaSemana(dataString) {
+  const diasDaSemana = [
+    "Domingo",
+    "Segunda-feira",
+    "Terça-feira",
+    "Quarta-feira",
+    "Quinta-feira",
+    "Sexta-feira",
+    "Sábado",
+  ];
+
+  // Dividir a string da data em ano, mês e dia
+  const [ano, mes, dia] = dataString.split("-");
+
+  // Criar um objeto Date com o formato 'YYYY-MM-DD'
+  const dataObj = new Date(ano, mes - 1, dia); // O mês no objeto Date é baseado em zero (janeiro é 0, fevereiro é 1, etc.)
+
+  // Obter o índice do dia da semana (0 para Domingo, 1 para Segunda-feira, etc.)
+  const indiceDiaDaSemana = dataObj.getDay();
+
+  // Retornar o nome do dia da semana correspondente
+  return diasDaSemana[indiceDiaDaSemana];
+}
+
+// Exemplo de uso:
+const dataExemplo = "2024-02-19"; // formato: 'YYYY-MM-DD'
+const diaDaSemana = obterDiaDaSemana(dataExemplo);
+
+console.log(`A data ${dataExemplo} corresponde a um(a) ${diaDaSemana}.`);
+
+// Exercício 7
+// Desenvolver uma função que ordene um array de objetos com base em uma determinada propriedade.
+function ordenarPorPropriedade(arrayDeObjetos, propriedade) {
+  return arrayDeObjetos.sort((a, b) => {
+    if (a[propriedade] < b[propriedade]) {
+      return -1;
+    }
+    if (a[propriedade] > b[propriedade]) {
+      return 1;
+    }
+    return 0;
+  });
+}
+
+// Exemplo de uso:
+const pessoas = [
+  { nome: "Alice", idade: 30 },
+  { nome: "Bob", idade: 25 },
+  { nome: "Charlie", idade: 35 },
+];
+
+const pessoasOrdenadasPorNome = ordenarPorPropriedade(pessoas, "nome");
+console.log("Pessoas ordenadas por nome:", pessoasOrdenadasPorNome);
+
+const pessoasOrdenadasPorIdade = ordenarPorPropriedade(pessoas, "idade");
+console.log("Pessoas ordenadas por idade:", pessoasOrdenadasPorIdade);
+
+// Exercício 8
+// Implementar uma função que calcule o fatorial de um número utilizando recursividade.
+function calcularFatorial(numero) {
+  if (numero === 0 || numero === 1) {
+    return 1;
+  } else {
+    return numero * calcularFatorial(numero - 1);
+  }
+}
+
+// Exemplo de uso:
+const numeroParaCalcularFatorial = 6;
+const resultadoFatorial = calcularFatorial(numeroParaCalcularFatorial);
+console.log(
+  `O fatorial de ${numeroParaCalcularFatorial} é ${resultadoFatorial}`
+);
+
+// Exercício 9
+// Criar uma função que receba um número e retorne a soma dos seus dígitos.
+function somaDosDigitos(numero) {
+  // Converte o número para uma string para iterar sobre seus dígitos
+  const digitos = numero.toString().split("");
+
+  // Calcula a soma dos dígitos convertendo cada dígito de volta para número
+  const soma = digitos.reduce(
+    (acumulador, digito) => acumulador + parseInt(digito, 10),
+    0
+  );
+
+  return soma;
+}
+
+// Exemplo de uso:
+const numeroExemplo = 12345;
+const resultadoSoma = somaDosDigitos(numeroExemplo);
+console.log(`A soma dos dígitos de ${numeroExemplo} é ${resultadoSoma}.`);
+
+// Exercício 10
+// Desenvolver uma função que converta um número binário para decimal.
+function binarioParaDecimal(binario) {
+  // Verifica se o argumento é uma string
+  if (typeof binario !== "string") {
+    throw new Error(
+      "O argumento deve ser uma string contendo um número binário."
+    );
+  }
+
+  // Verifica se a string contém apenas 0s e 1s
+  if (!/^[01]+$/.test(binario)) {
+    throw new Error("A string deve conter apenas 0s e 1s.");
+  }
+
+  // Converte o número binário para decimal usando parseInt
+  const decimal = parseInt(binario, 2);
+
+  return decimal;
+}
+
+// Exemplo de uso:
+const binarioExemplo = "10101";
+const decimalResultado = binarioParaDecimal(binarioExemplo);
+console.log(
+  `O número binário ${binarioExemplo} em decimal é ${decimalResultado}`
+);
