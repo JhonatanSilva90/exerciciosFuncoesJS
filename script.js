@@ -924,3 +924,103 @@ let numerosPositivos = filtrarNumerosPositivos(numeros);
 console.log(
   `Os números positivos existentes na lista [${numeros}] são ${numerosPositivos}.`
 );
+
+// Variáveis e tipos de dados: Escreva um programa que declare duas variáveis, “nome” e “idade”, e as imprima em um console em uma frase que diga “Olá, meu nome é [nome] e eu tenho [idade] anos”.
+// Declarando as variáveis
+let nome = "Jhonatan";
+let idade = 33;
+
+// Imprimindo a frase no console
+console.log(`Olá, meu nome é ${nome} e eu tenho ${idade} anos.`);
+
+// Operadores: Crie um programa que solicite ao usuário dois números e exiba o resultado da soma, subtração, multiplicação e divisão desses números.
+// Solicitando dois números ao usuário
+let numero1 = parseFloat(prompt("Digite o primeiro número:"));
+let numero2 = parseFloat(prompt("Digite o segundo número:"));
+
+// Realizando as operações
+let soma = numero1 + numero2;
+let subtracao = numero1 - numero2;
+let multiplicacao = numero1 * numero2;
+let divisao = numero1 / numero2;
+
+// Exibindo os resultados
+console.log(`A soma dos números ${numero1} e ${numero2} é igual a ${soma}.`);
+console.log(
+  `A subtração dos números ${numero1} e ${numero2} é igual a ${subtracao}.`
+);
+console.log(
+  `A multiplicação dos números ${numero1} e ${numero2} é igual a ${multiplicacao}.`
+);
+console.log(
+  `A divisão dos números ${numero1} e ${numero2} é igual a ${divisao}.`
+);
+
+// Condições: Escreva um programa que pergunte ao usuário sua idade e imprima se ele é maior ou menor de idade.
+// Solicitando a idade ao usuário
+let idade = parseInt(prompt("Digite sua idade:"));
+
+// Verificando se a pessoa é maior ou menor de idade
+if (idade >= 18) {
+  console.log("Você é maior de idade.");
+} else {
+  console.log("Você é menor de idade.");
+}
+
+// Loops: Crie um loop que imprima todos os números de 1 a 100.
+// Utilizando um loop for para imprimir números de 1 a 100
+for (let i = 1; i <= 100; i++) {
+  console.log(i);
+}
+
+// Funções: Escreva uma função que aceite dois números como argumentos e retorne sua soma.
+function somarNumeros(numero1, numero2) {
+  return numero1 + numero2;
+}
+
+// Exemplo de uso da função
+let resultadoSoma = somarNumeros(6, 7); // Chama a função com os números 5 e 7
+console.log(`A soma dos números é ${resultadoSoma}.`); // Exibe o resultado no console
+
+// Arrays: Escreva um programa que declare um array de suas frutas favoritas e imprima cada fruta na lista usando um loop.
+// Declarando um array de frutas favoritas
+let frutasFavoritas = ["Maçã", "Banana", "Morango", "Uva", "Pêssego"];
+
+// Usando um loop para imprimir cada fruta
+for (var i = 0; i < frutasFavoritas.length; i++) {
+  console.log(frutasFavoritas[i]);
+}
+
+// Objetos: Crie um objeto que represente um livro, com propriedades para título, autor e número de páginas. Imprima cada propriedade no console.
+// Criando um objeto que representa um livro
+let livro = {
+  titulo: "O Senhor dos Anéis",
+  autor: "J.R.R. Tolkien",
+  numeroDePaginas: 1170,
+};
+
+// Imprimindo cada propriedade no console
+console.log("Título: " + livro.titulo);
+console.log("Autor: " + livro.autor);
+console.log("Número de Páginas: " + livro.numeroDePaginas);
+
+// Manipulação de Strings: Escreva uma função que receba uma string e retorne a mesma string, mas com a primeira letra de cada palavra em maiúsculas.
+function capitalizarPalavras(str) {
+  // Dividir a string em palavras
+  let palavras = str.split(" ");
+
+  // Iterar sobre cada palavra, capitalizando a primeira letra
+  for (let i = 0; i < palavras.length; i++) {
+    palavras[i] = palavras[i].charAt(0).toUpperCase() + palavras[i].slice(1);
+  }
+
+  // Juntar as palavras novamente em uma string
+  let resultado = palavras.join(" ");
+
+  return resultado;
+}
+
+// Exemplo de uso da função
+let textoOriginal = "esse é um exemplo de manipulação de strings";
+let textoCapitalizado = capitalizarPalavras(textoOriginal);
+console.log(textoCapitalizado);
