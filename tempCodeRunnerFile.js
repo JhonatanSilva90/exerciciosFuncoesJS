@@ -1,1 +1,1 @@
-é um palíndromo
+ resultado += 
