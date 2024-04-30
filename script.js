@@ -42,26 +42,26 @@ const prompt = require("readline-sync");
 // // Implemente uma função que calcule a média aritmética de um array de números e retorne o resultado.
 // // Utilize essa função para calcular a média de diferentes conjuntos de números.
 
-function mediaAritmetica(arrayNumeros) {
-  if (arrayNumeros === 0) {
-    return 0;
-  }
-  let soma = 0;
-  for (i = 0; i < arrayNumeros.length; i++) {
-    soma = soma + arrayNumeros[i]; // Ou soma += arrayNumeros[i]
-  }
-  const media = soma / arrayNumeros.length;
-  return media;
-}
+// function mediaAritmetica(arrayNumeros) {
+//   if (arrayNumeros === 0) {
+//     return 0;
+//   }
+//   let soma = 0;
+//   for (i = 0; i < arrayNumeros.length; i++) {
+//     soma = soma + arrayNumeros[i]; // Ou soma += arrayNumeros[i]
+//   }
+//   const media = soma / arrayNumeros.length;
+//   return media;
+// }
 
-const conjunto1 = [10, 20, 30, 40, 50];
-const conjunto2 = [5, 15, 25, 35, 45];
+// const conjunto1 = [10, 20, 30, 40, 50];
+// const conjunto2 = [5, 15, 25, 35, 45];
 
-const mediaConjunto1 = mediaAritmetica(conjunto1);
-const mediaConjunto2 = mediaAritmetica(conjunto2);
+// const mediaConjunto1 = mediaAritmetica(conjunto1);
+// const mediaConjunto2 = mediaAritmetica(conjunto2);
 
-console.log(`A média do conjunto 1 é: ${mediaConjunto1}`);
-console.log(`A média do conjunto 2 é: ${mediaConjunto2}`);
+// console.log(`A média do conjunto 1 é: ${mediaConjunto1}`);
+// console.log(`A média do conjunto 2 é: ${mediaConjunto2}`);
 
 // // Exercício 4
 // // Crie uma função que receba uma string como parâmetro e retorne a mesma string com todas as
@@ -1031,3 +1031,17 @@ console.log(`A média do conjunto 2 é: ${mediaConjunto2}`);
 // let textoOriginal = "esse é um exemplo de manipulação de strings";
 // let textoCapitalizado = capitalizarPalavras(textoOriginal);
 // console.log(textoCapitalizado);
+
+// // Faça uma função que informe a quantidade de dígitos de um determinado número inteiro informado.
+// let number1 = Number(prompt.question("Digite um número: "));
+
+// function contarDigitos(number1) {
+//   let numeroString = number1.toString();
+//   return numeroString.length;
+// }
+// if (!isNaN(number1) && Number.isInteger(parseFloat(number1))) {
+//   let quantidadeDigitos = contarDigitos(number1);
+//   console.log(`O número ${number1} tem ${quantidadeDigitos} digitos.`);
+// } else {
+//   console.log("O valor inserido não é um número inteiro!");
+// }
